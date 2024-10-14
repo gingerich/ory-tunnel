@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.0/.schema/devbox.schema.json",
+  "packages": ["deno@latest"],
+  "env": {
+    "PATH": "/Users/marlin/.deno/bin:$PATH"
+  },
+  "shell": {
+    "scripts": {
+      "deploy": [
+        "deployctl deploy --env-file <(cat .env | op inject | tee) --project ory-tunnel"
+      ]
+    }
+  }
+}
