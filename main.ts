@@ -1,9 +1,3 @@
-// const envSchema = z.object({
-//   APPLICATION_ORIGIN: z.string().url(),
-//   ORY_PROJECT_HOST: z.string(),
-//   ORY_API_KEY: z.string()
-// });
-
 type Config = Readonly<{
   port: number;
   appOrigin: string;
@@ -69,10 +63,6 @@ function rewriteCookieDomain(
           encodeURIComponent(getURLComponent(newURL))
         )
       }, cookie.trimStart())
-      // cookie.trimStart().replaceAll(
-      //   encodeURIComponent(upstreamOrigin),
-      //   encodeURIComponent(newHostname),
-      // )
     );
   });
 }
