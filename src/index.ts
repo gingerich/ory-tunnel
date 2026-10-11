@@ -35,8 +35,6 @@ function toOryRequest(req: Request, cfg: Config): Request {
   oryReq.headers.set("Ory-No-Custom-Domain-Redirect", "true");
   oryReq.headers.set("Ory-Base-URL-Rewrite", cfg.appOrigin);
   oryReq.headers.set("Ory-Base-URL-Rewrite-Token", cfg.apiKey);
-  // Carried over from the original Deno version; purpose unconfirmed.
-  oryReq.headers.set("Ory-Network-Ingress", "T");
   return oryReq;
 }
 
