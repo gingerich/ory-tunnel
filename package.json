@@ -3,9 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "vitest run"
+    "dev": "APPLICATION_ORIGIN=http://localhost:8787 op run --env-file=.env.op -- wrangler dev",
+    "deploy": "wrangler deploy",
+    "secrets": "op run --env-file=.env.op -- sh -c 'printf %s \"$ORY_API_KEY\" | wrangler secret put ORY_API_KEY'",
+    "test": "vitest run",
+    "typecheck": "wrangler types && tsc -p .",
+    "postinstall": "wrangler types"
   },
   "devDependencies": {
-    "vitest": "^5.0.3"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.149.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261006.1": true
   }
 }
