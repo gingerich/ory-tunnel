@@ -43,6 +43,44 @@
           "store_path": "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0"
         }
       }
+    },
+    "ory@1.3.3": {
+      "last_modified": "2026-10-08T19:21:32Z",
+      "resolved": "github:NixOS/nixpkgs/8edc0c72e3a38faf5434e40d1f19431125fe4b30#ory",
+      "source": "devbox-search",
+      "version": "1.3.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hbfh48qfiq65mq9v0hcglr50cxc6zylv-ory-1.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hbfh48qfiq65mq9v0hcglr50cxc6zylv-ory-1.3.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q40br2jmiw6k53bd87a2w8jx4m5mfg66-ory-1.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/q40br2jmiw6k53bd87a2w8jx4m5mfg66-ory-1.3.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/09ry0qqzipzf2jvvhjcpq7h1c6zs948f-ory-1.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/09ry0qqzipzf2jvvhjcpq7h1c6zs948f-ory-1.3.3"
+        }
+      }
     }
   }
 }
