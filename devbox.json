@@ -1,6 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.0/.schema/devbox.schema.json",
-  "packages": ["deno@latest"],
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.18.0/.schema/devbox.schema.json",
+  "packages": [
+    "deno@latest",
+    "nodejs@24"
+  ],
   "env": {
     "PATH": "/Users/marlin/.deno/bin:$PATH"
   },

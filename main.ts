@@ -7,7 +7,7 @@ type Config = Readonly<{
   }>;
 }>;
 
-function newConfig(env: Deno.Env): Config {
+export function newConfig(env: Deno.Env): Config {
   const port = parseInt(env.get("PORT") ?? "8080");
   const appOrigin = env.get("APPLICATION_ORIGIN") ?? "";
   const oryProjectHost = env.get("ORY_PROJECT_HOST") ?? "";
@@ -116,7 +116,7 @@ function newResponseRewriter(
 
 type HTTPHandler = (req: Request) => Promise<Response>;
 
-function newHandler(cfg: Config): HTTPHandler {
+export function newHandler(cfg: Config): HTTPHandler {
   const rewriteRequest = newRequestRewriter(cfg);
   const rewriteResponse = newResponseRewriter(
     cfg.ory.projectHost,

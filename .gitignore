@@ -10,3 +10,5 @@
 
 # devbox packages
 .devbox
+# node
+node_modules
