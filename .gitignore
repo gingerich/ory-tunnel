@@ -1,12 +1,16 @@
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+# local env and 1Password secret references
+.env*
+.dev.vars*
 
 # vscode settings
 .vscode
 
 # devbox packages
 .devbox
+
+# node
+node_modules
+
+# wrangler
+.wrangler
+worker-configuration.d.ts
