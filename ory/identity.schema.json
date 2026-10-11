@@ -1,5 +1,5 @@
 {
-  "$id": "https://id.gingerich.io/schemas/person.v1.json",
+  "$id": "https://id.gingerich.io/schemas/person.v2.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Person",
   "type": "object",
@@ -25,15 +25,21 @@
             "organizations": { "matcher": "email_domain" }
           }
         },
-        "given_name": {
-          "type": "string",
-          "title": "First name",
-          "maxLength": 100
-        },
-        "family_name": {
-          "type": "string",
-          "title": "Last name",
-          "maxLength": 100
+        "name": {
+          "type": "object",
+          "properties": {
+            "first": {
+              "type": "string",
+              "title": "First name",
+              "maxLength": 100
+            },
+            "last": {
+              "type": "string",
+              "title": "Last name",
+              "maxLength": 100
+            }
+          },
+          "additionalProperties": false
         }
       },
       "required": ["email"],
